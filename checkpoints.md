@@ -1,12 +1,13 @@
-# Checkpoints — v3
+# Checkpoints — v4
  
-1. What is the difference between url_for('students') and
-   writing /students directly in the href attribute?
+1. Visit /config-check. Does it show your DATABASE_URL? Good.
+   Now remove that route and commit.
  
-2. Rename the students() function to student_list().
-   What breaks? Fix it using url_for.
+2. Delete .env temporarily. What error appears on startup?
+   Restore it.
  
-3. Add a third route /about and link to it from both nav bars.
-   What is the minimum number of files you must change?
+3. Run `git status`. Is .env listed? It should NOT be.
+   Run `git ls-files`. Is .env in the tracked list?
  
-4. Run `git log --oneline`. You should now see 3 commits.
+4. What happens if SECRET_KEY is missing and you try to use
+   flash messages (coming in v12)?

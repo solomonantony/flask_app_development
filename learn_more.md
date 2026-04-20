@@ -1,17 +1,17 @@
-# Learn More — v3
+# Learn More — v4
  
-- Flask: url_for()
-  https://flask.palletsprojects.com/api/#flask.url_for
-  URL generation, avoiding hardcoded paths
+- python-dotenv documentation
+  https://saurabh-kumar.com/python-dotenv/
+  Loading .env files in Python
  
-- Jinja2 Template Inheritance (extends / block)
-  https://jinja.palletsprojects.com/templates/#template-inheritance
-  How to share a nav bar across all pages
+- 12-Factor App: Config
+  https://12factor.net/config
+  Best practice: store config in the environment
  
-- HTML <nav> element — MDN
-  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
-  Semantic navigation landmark
+- Flask Configuration Handling
+  https://flask.palletsprojects.com/config/
+  app.config, SECRET_KEY, and config patterns
  
-- Git log
-  https://git-scm.com/docs/git-log
-  Viewing commit history
+- Git .gitignore
+  https://git-scm.com/docs/gitignore
+  Patterns and rules for ignoring files
