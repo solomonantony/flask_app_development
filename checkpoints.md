@@ -1,13 +1,12 @@
-# Checkpoints — v4
+# Checkpoints — v5
  
-1. Visit /config-check. Does it show your DATABASE_URL? Good.
-   Now remove that route and commit.
+1. Visit /db-check with Docker running. Does it succeed?
  
-2. Delete .env temporarily. What error appears on startup?
-   Restore it.
+2. Stop the container (docker stop univdb) and visit /db-check again.
+   What error message appears?
  
-3. Run `git status`. Is .env listed? It should NOT be.
-   Run `git ls-files`. Is .env in the tracked list?
+3. What does the port number 5433 represent?
+   Why is it not 5432?
  
-4. What happens if SECRET_KEY is missing and you try to use
-   flash messages (coming in v12)?
+4. Remove the /db-check route, commit, then run `git show HEAD`.
+   Can you see the diff of what changed?

@@ -1,11 +1,16 @@
 import os
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
  
-load_dotenv()   # reads .env into os.environ
+load_dotenv()
  
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev')
+app.config['SECRET_KEY']                     = os.environ.get('SECRET_KEY', 'dev')
+app.config['SQLALCHEMY_DATABASE_URI']        = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+ 
+db = SQLAlchemy(app)
  
 @app.route('/')
 def index():
@@ -15,10 +20,14 @@ def index():
 def students():
     return render_template('students.html')
  
-# TEMPORARY — remove after verifying
-@app.route('/config-check')
-def config_check():
-    return os.environ.get('DATABASE_URL', 'NOT FOUND')
+# TEMPORARY connection test — remove before v6 commit
+@app.route('/db-check')
+def db_check():
+    try:
+        with db.engine.connect() as conn:
+            return 'Database connection successful!'
+    except Exception as e:
+        return f'Connection failed: {e}', 500
  
 if __name__ == '__main__':
     debug = os.environ.get('FLASK_DEBUG', '0') == '1'

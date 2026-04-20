@@ -1,17 +1,17 @@
-# Learn More — v4
+# Learn More — v5
  
-- python-dotenv documentation
-  https://saurabh-kumar.com/python-dotenv/
-  Loading .env files in Python
+- Flask-SQLAlchemy: Getting Started
+  https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/quickstart/
+  Setup, configuration, db object
  
-- 12-Factor App: Config
-  https://12factor.net/config
-  Best practice: store config in the environment
+- SQLAlchemy Connection URLs
+  https://docs.sqlalchemy.org/en/20/core/engines.html#database-urls
+  URI format for PostgreSQL, SQLite, MySQL and others
  
-- Flask Configuration Handling
-  https://flask.palletsprojects.com/config/
-  app.config, SECRET_KEY, and config patterns
+- Docker: Managing Containers
+  https://docs.docker.com/engine/reference/commandline/container/
+  start, stop, exec, logs commands
  
-- Git .gitignore
-  https://git-scm.com/docs/gitignore
-  Patterns and rules for ignoring files
+- Git show
+  https://git-scm.com/docs/git-show
+  Inspect a specific commit's diff
